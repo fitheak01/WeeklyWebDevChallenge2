@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1{
+  display: none;
+}
+
+a:visited{
+  color: #000000;
+}
+
+p{
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/*---NAVIGATION---*/
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 147px;
+  padding: 20px;
+  margin-top: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.nav .nav-list{
+  float: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.nav .nav-list .nav-list-item{
+  display: inline;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.nav-list .nav-list-item a{
+  text-decoration: none;
+  padding-top: 6px;
+}
+
+.nav-list .nav-list-item a:hover,
+.active-item{
+  border-top: 3px solid #ff6033;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/*---HEADER---*/
+.head{
+  padding-top: 147px;
+  background: #ffffff;
+  background: url("./img/strawberry.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.head .title{
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.head-content{
+  position: relative;
+  top: 155px;
+  width: 50%;
+}
+/*--MAIN--*/
+.about{
+  background: #00b2b2 url("./img/cup.png") 25% center no-repeat;
+  background-size: auto;
+  min-height: 700px;
+}
+
+.services{
+  background: #70bfff url("./img/potatoes.png") 75% center no-repeat;
+  background-size: auto;
+  min-height: 790px;
+}
+
+.gallery{
+  background: #ffe92f;
+  min-height: 1536px;
+}
+
+
+.subscribe{
+  background: #ffffff;
+  background: url("./img/subscribe-background.png") no-repeat;
+  min-height: 500px;
+}
+
+.blog{
+  background: #b07cf7;
+  min-height: 866px;
+}
+
+.contact{
+  background: #ffffff;
+  background: url("./img/contact-background.png");
+  background-size: cover;
+  min-height: 866px;
+}
+/*--FOOTER--*/
+.footer{
+  background: #262626;
+  min-height: 90px;
+}

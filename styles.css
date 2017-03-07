@@ -1,28 +1,34 @@
-*{
+*,
+*:after,
+*:before {
     padding: 0;
     margin: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 }
 
-body *{
-  box-sizing: border-box;
+body * {
   font-family: 'Raleway', sans-serif;
 }
 
-h1{
+h1 {
   display: none;
 }
 
-a:visited{
+a:visited {
   color: #000000;
 }
 
-p{
+p {
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
 }
 
-.btn{
+.btn {
   width: 200px;
   height: 50px;
   border: none;
@@ -39,8 +45,37 @@ p{
   box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
 }
 
+/*---GRID---*/
+.grid-container:after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+}
+[class*='col-']:last-of-type {
+  padding: 0;
+}
+
+.col-1-1 {
+  width: 100%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 /*---NAVIGATION---*/
-.nav{
+.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,7 +87,7 @@ p{
   max-width: 1200px;
 }
 
-.nav .nav-list{
+.nav .nav-list {
   float: right;
   font-size: 16px;
   font-weight: 700;
@@ -60,31 +95,24 @@ p{
   margin-top: 20px;
 }
 
-.nav .nav-list .nav-list-item{
+.nav .nav-list .nav-list-item {
   display: inline;
   text-transform: uppercase;
   margin-right: 30px;
 }
 
-.nav-list .nav-list-item a{
+.nav-list .nav-list-item a {
   text-decoration: none;
   padding-top: 6px;
 }
 
 .nav-list .nav-list-item a:hover,
-.active-item{
+.active-item {
   border-top: 3px solid #ff6033;
 }
 
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-
 /*---HEADER---*/
-.head{
+.head {
   padding-top: 147px;
   background: #ffffff;
   background: url("./img/strawberry.png") no-repeat center;
@@ -92,67 +120,67 @@ p{
   min-height: 100vh;
 }
 
-.head .title{
+.head .title {
   font-size: 60px;
   font-weight: 900;
   margin-bottom: 12px;
 }
 
-.head-content{
+.head-content {
   position: relative;
   top: 155px;
   width: 50%;
 }
 
-.head .btn.get-free{
+.head .btn.get-free {
   background: #ff6033;
   margin-top: 32px;
 }
 
-.head .btn-scroll{
+.head .btn-scroll {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
 /*--MAIN--*/
-.about{
+.about {
   background: #00b2b2 url("./img/cup.png") 25% center no-repeat;
   background-size: auto;
   min-height: 700px;
 }
 
-.services{
+.services {
   background: #70bfff url("./img/potatoes.png") 75% center no-repeat;
   background-size: auto;
   min-height: 790px;
 }
 
-.gallery{
+.gallery {
   background: #ffe92f;
   min-height: 1536px;
 }
 
 
-.subscribe{
+.subscribe {
   background: #ffffff;
   background: url("./img/subscribe-background.png") no-repeat;
   min-height: 500px;
 }
 
-.blog{
+.blog {
   background: #b07cf7;
   min-height: 866px;
 }
 
-.contact{
+.contact {
   background: #ffffff;
   background: url("./img/contact-background.png");
   background-size: cover;
   min-height: 866px;
 }
 /*--FOOTER--*/
-.footer{
+.footer {
   background: #262626;
   min-height: 90px;
 }

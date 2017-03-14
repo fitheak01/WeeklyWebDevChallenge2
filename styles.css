@@ -17,7 +17,7 @@ body * {
 h1 {
   display: none;
 }
-
+a,
 a:visited {
   color: #000000;
 }
@@ -46,19 +46,22 @@ p {
 }
 
 /*---GRID---*/
-.grid-container:after {
-  content: "";
-  display: table;
-  clear:both;
+.grid-container{
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid-container.reversed{
+  flex-direction: row-reverse;
 }
 
 
 [class*='col-'] {
-  float: left;
   padding-right: 20px;
-}
-[class*='col-']:last-of-type {
-  padding: 0;
+  position: relative;
 }
 
 .pull-right{
@@ -73,11 +76,6 @@ p {
   width: 50%;
 }
 
-.grid-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
 /*---NAVIGATION---*/
 .nav {
   position: fixed;
@@ -155,15 +153,80 @@ p {
 }
 /*--MAIN--*/
 .about {
-  background: #00b2b2 url("./img/cup.png") 25% center no-repeat;
-  background-size: auto;
+  background: #00b2b2;
   min-height: 700px;
 }
+.about .grid-container{
+  min-height: 700px;
+}
+.about .header,
+.services .header{
+  color: #ffffff;
+  font-size: 90px;
+  line-height: 27px;
+  margin-bottom: 40px;
+}
+.about .text{
+  color: #ffffff;
+  font-size: 17px;
+}
+.about .text:first-of-type{
+  margin-bottom: 10px;
+}
+.about img,
+.services .header + img{
+  width: 100%;
+}
+
 
 .services {
-  background: #70bfff url("./img/potatoes.png") 75% center no-repeat;
-  background-size: auto;
+  background: #70bfff;
   min-height: 790px;
+}
+.services .grid-container{
+  min-height: 790px;
+}
+.services .header{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.services-list{
+  list-style: none;
+}
+
+.service-item{
+  max-width: 400px;
+  height: 100px;
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.service-item .category{
+  width: 75%;
+  float: left;
+}
+
+.category strong,
+.category-picture img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.service-item .category-picture{
+  width: 25%;
+  border-left: 1px solid #000000;
+  float: left
+}
+
+.service-item .category,
+.service-item .category-picture{
+  height: 100px;
+  position: relative;
 }
 
 .gallery {

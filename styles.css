@@ -28,6 +28,12 @@ p {
   line-height: 27px;
 }
 
+input[type="mail"],
+input[type="text"]{
+  height: 54px;
+  border: 1px solid #262626;
+}
+
 .btn {
   width: 200px;
   height: 50px;
@@ -77,6 +83,9 @@ p {
   width: 50%;
 }
 
+.text{
+  font-size: 17px;
+}
 /*---NAVIGATION---*/
 .nav {
   position: fixed;
@@ -280,18 +289,22 @@ p {
 
 .gallery-col{
   display: flex;
-  padding-right: 30px;
 }
 .gallery-col img{
   width: 50%;
+  -webkit-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  -moz-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
 }
 .gallery-col.main{
   width: 70%;
   padding-right: 30px;
 }
+
 .gallery-col.main img,
 .gallery-col.side img{
   width: 100%;
+  flex-grow: 1.1;
 }
 .gallery-col.side{
   width: 30%;
@@ -300,6 +313,18 @@ p {
   flex-direction: column;
   padding-right: 0;
 }
+.gallery-col.side img:first-child{
+  margin-bottom: 30px;
+}
+.gallery-col.full{
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gallery-col.full img:first-child{
+  margin-right: 30px;
+}
+
 
 .gallery .view-more{
   position: absolute;
@@ -310,10 +335,34 @@ p {
 }
 .subscribe {
   background: #ffffff;
-  background: url("./img/subscribe-background.png") no-repeat;
+  background: url("./img/whortleberry.png") 85% center no-repeat;
   min-height: 500px;
 }
+.subscribe .grid-container{
+  display: block;
+  display: block;
+  margin: 0 auto;
+}
 
+.subscribe .header{
+  margin-top: 148px;
+  font-size: 40px;
+}
+
+.subscribe .text{
+  margin-bottom: 40px;
+  max-width: 550px;
+}
+
+.subscribe input{
+  width: 570px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+.btn.btn-subscribe{
+  background-color: #96b92c;
+  margin-left: 30px;
+}
 .blog {
   background: #b07cf7;
   min-height: 866px;

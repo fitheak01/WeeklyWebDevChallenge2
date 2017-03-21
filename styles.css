@@ -340,7 +340,6 @@ input[type="text"]{
 }
 .subscribe .grid-container{
   display: block;
-  display: block;
   margin: 0 auto;
 }
 
@@ -368,6 +367,98 @@ input[type="text"]{
   min-height: 866px;
 }
 
+.blog .grid-container{
+  display: block;
+}
+
+.blog .header,
+.blog .text{
+  text-align: center;
+  color: #ffffff;
+}
+
+.blog .header{
+  font-size: 90px;
+  margin-top: 80px;
+}
+
+.blog .text{
+  margin: 30px auto;
+  max-width: 553px;
+}
+
+.blog .latest-posts{
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+}
+
+.post{
+  -webkit-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  -moz-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  position: relative;
+}
+
+.post .post-time{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: none;
+}
+
+.post:after{
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  -moz-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+}
+
+.post .post-time small{
+  display: block;
+  font-size: 21px;
+  margin-top: -5px;
+  text-transform: uppercase;
+}
+
+.post .post-header{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #ffffff;
+  padding: 0 20px;
+  display: none;
+}
+
+.post .post-image{
+  height: 100%;
+}
+
+.post-header .post-title{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.post-header .post-title + p{
+  font-size: 13px;
+}
+
+.post:hover .post-time,
+.post:hover .post-header{
+  display: block;
+}
 .contact {
   background: #ffffff;
   background: url("./img/contact-background.png");

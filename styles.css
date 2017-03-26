@@ -1,3 +1,4 @@
+body,
 body *,
 *:after,
 *:before {
@@ -364,6 +365,7 @@ input[type="text"]{
 }
 .blog {
   background: #b07cf7;
+  position: relative;
   min-height: 866px;
 }
 
@@ -390,7 +392,6 @@ input[type="text"]{
 .blog .latest-posts{
   display: flex;
   justify-content: space-between;
-  /*padding: 0 20px;*/
 }
 
 .post{
@@ -398,6 +399,7 @@ input[type="text"]{
   -moz-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
   box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
   position: relative;
+  cursor: pointer;
 }
 
 .post .post-time{
@@ -411,7 +413,6 @@ input[type="text"]{
   text-align: center;
   width: 60px;
   height: 60px;
-  display: none;
 }
 
 .post:after{
@@ -422,9 +423,9 @@ input[type="text"]{
   right: 0;
   bottom: 0;
   position: absolute;
-  -webkit-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
-  -moz-box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
-  box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
+  -webkit-box-shadow: inset 0px -135px 15px -10px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px -135px 15px -10px rgba(0,0,0,0.5);
+  box-shadow: inset 0px -135px 15px -10px rgba(0,0,0,0.5);
 }
 
 .post .post-time small{
@@ -440,11 +441,12 @@ input[type="text"]{
   width: 100%;
   color: #ffffff;
   padding: 0 20px;
-  display: none;
+  z-index: 2;
 }
 
 .post .post-image{
   height: 100%;
+  width: 100%;
 }
 
 .post-header .post-title{
@@ -455,9 +457,18 @@ input[type="text"]{
   font-size: 13px;
 }
 
-.post:hover .post-time,
-.post:hover .post-header{
-  display: block;
+/*.post:hover .post-time,*/
+.post:hover .post-header h3{  
+    text-decoration: underline;
+}
+
+.btn.view-more{
+  color: #ffffff;
+  background-color: #f72b3b;
+  position: absolute;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
 }
 .contact {
   background: #ffffff;

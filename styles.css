@@ -509,6 +509,7 @@ input[type="tel"] {
   margin-bottom: 15px;
   display: block;
   outline: none;
+  font-size: 15px;
 }
 
 .contact-form input:focus,
@@ -516,6 +517,7 @@ input[type="tel"] {
   border-left: 5px solid #355b82;
   padding-left: 10px;
   background-color: rgba(0, 196, 196, 1);
+  font-weight: 700;
 }
 
 .contact-form textarea{
@@ -571,7 +573,7 @@ input[type="tel"] {
 .footer {
   background: #262626;
   min-height: 90px;
-  color: #747474;
+  color: #b9b9b9;
   font-size: 15px;
 }
 

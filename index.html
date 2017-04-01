@@ -69,7 +69,7 @@
             <li class="service-item">
               <div class="category"><strong>Online Shopping</strong></div>
               <div class="category-picture">
-                <img src="./img/trolley-icon.png">
+                <img src="./img/trolley-icon.png" alt="Trolley">
               </div>
             </li>
             <li class="service-item">
@@ -140,7 +140,7 @@
         <div class="latest-posts">
           <article class="post">
             <a href="#">
-              <img class="post-image" src="./img/blog-image-1.png"/>
+              <img class="post-image" src="./img/blog-image-1.png" alt="Green Smoothies"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
               <header class="post-header">
                 <h3 class="post-title">Green Smoothies: Too much of a Good Thing?</h3>
@@ -150,21 +150,21 @@
           </article>
           <article class="post">
             <a href="#">
-              <img class="post-image" src="./img/blog-image-2.png"/>
+              <img class="post-image" src="./img/blog-image-2.png" alt="Growing food"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
                         <header class="post-header">
-              <h3 class="post-title">Green Smoothies: Too much of a Good Thing?</h3>
-              <p>By Ausktezz - <time datetime="2017-03-20 18:30">2 hours ago<time></p>
+              <h3 class="post-title">Growing Food and a “Thirst” for Innovation</h3>
+              <p>By Ausktezz - <time datetime="2017-03-20 18:30">3 hours ago<time></p>
             </header>
             </a>
           </article>
           <article class="post">
             <a href="#">
-              <img class="post-image" src="./img/blog-image-3.png"/>
+              <img class="post-image" src="./img/blog-image-3.png" alt="Green Smoothies"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
               <header class="post-header">
-              <h3 class="post-title">Green Smoothies: Too much of a Good Thing?</h3>
-              <p>By Ausktezz - <time datetime="2017-03-20 18:30">2 hours ago<time></p>
+              <h3 class="post-title">Pesticides & Food: What You Need to Know</h3>
+              <p>By Ausktezz - <time datetime="2017-03-20 18:30">6 hours ago<time></p>
             </header>
             </a>
           </article>
@@ -174,24 +174,44 @@
     </section>
     <section class="contact">
       <div class="grid-container">
-        <h2>Contact</h2>
-        <p>
+        <h2 class="header">Contact</h2>
+        <p class="text">
           For new projects, ideas, business or anything you'd like to discuss,
           contact with me!
         </p>
-        <form>
-          <input type="text" placeholder="Your name...">
-          <input type="text" placeholder="Your email...">
-          <input type="text" placeholder="Your phone number...">
-          <textarea placeholder="Your message..."></textarea>
-        </form>
+        <div class="grid-row">
+          <div class="col-1-2">
+            <form class="contact-form">
+              <label for="name">Your name</label>
+              <input type="text" id="name" placeholder="Your name...">
+              <label for="mail">Your email</label>            
+              <input type="mail" id="mail" placeholder="Your email...">
+              <label for="phone">Your phone number</label>              
+              <input type="tel" id="phone" placeholder="Your phone number...">
+              <label for="message">Your message</label>                            
+              <textarea id="message" placeholder="Your message..."></textarea>
+            </form>
+          </div>
+          <div class="col-1-2 contact-info">
+            <address>
+                <p>Address</p>
+                <p class="company-address">123 City name, Street, City, Country</p>
+                <p>Email</p>
+                <a href="mailto:@cahee@domain.com">cahee@domain.com</a>
+                <p>Phone</p>
+                <a href="tel:+012 345 6789">+012 345 6789</a>
+            </address>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <p>2015 Company. All right reserved</p>
-    <img src="">
-    <p>Made with love by Auskiteez</p>
+    <div class="grid-container">
+      <p>&copy; 2015 Company. All right reserved</p>
+      <img src="./img/logo-light.png" alt="Fresh Life Company Logo"/>
+      <p>Made with <span>love</span> by Auskiteez</p>
+    </div>
   </footer>
 </body>
 </html>

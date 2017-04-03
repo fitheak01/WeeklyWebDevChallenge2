@@ -95,13 +95,14 @@ input[type="tel"] {
   top: 0;
   left: 0;
   right: 0;
-  height: 147px;
   padding: 20px 0;
+  z-index: 3;
+}
 
-  margin-top: 50px;
-  margin: 0 auto;
+.nav-content{
   max-width: 1200px;
-  z-index: 2;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .nav .nav-list {
@@ -130,6 +131,14 @@ input[type="tel"] {
   border-top: 3px solid #ff6033;
 }
 
+.nav-scroll{
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+.nav-scroll .nav-content{
+  margin-top: 0;  
+}
 /*---HEADER---*/
 .head {
   background: #ffffff;

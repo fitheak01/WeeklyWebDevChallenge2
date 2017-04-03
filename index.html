@@ -11,17 +11,19 @@
 <body>
   <h1>Fresh Life Company Site</h1>
   <nav class="nav">
-    <img src="./img/logo-dark.png" alt="Fresh life company logo">
-    <ul class="nav-list">
-      <li class="nav-list-item"><a href="#">Home</a></li>
-      <li class="nav-list-item"><a href="#">About</a></li>
-      <li class="nav-list-item"><a href="#">Services</a></li>
-      <li class="nav-list-item"><a href="#">Gallery</a></li>
-      <li class="nav-list-item"><a href="#">Blog</a></li>
-      <li class="nav-list-item"><a href="#">Contact</a></li>
-    </ul>
+    <div class="nav-content">
+      <img src="./img/logo-dark.png" alt="Fresh life company logo">
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="#head">Home</a></li>
+        <li class="nav-list-item"><a href="#about">About</a></li>
+        <li class="nav-list-item"><a href="#services">Services</a></li>
+        <li class="nav-list-item"><a href="#gallery">Gallery</a></li>
+        <li class="nav-list-item"><a href="#blog">Blog</a></li>
+        <li class="nav-list-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
-  <header class="head">
+  <header class="head" id="head">
     <div class="grid-container">
       <div class="col-1-2 content">
         <h2 class="title">Fresh Life</h2>
@@ -58,7 +60,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="grid-container reversed">
         <div class="col-1-2">
           <h2 class="header">Our services</h2>
@@ -94,7 +96,7 @@
         </div>
     </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="grid-container">
         <h2 class="header">Gallery</h2>
         <p class="text">
@@ -119,7 +121,7 @@
       </div>
       <button class="btn view-more">View More</button>
     </section>
-    <section class="subscribe">
+    <aside class="subscribe">
       <div class="grid-container">
           <h2 class="header">Subscribe To Us</h2>
           <p class="text">
@@ -129,8 +131,8 @@
           <input type="mail" placeholder="Your email address..." required>
           <button class="btn btn-subscribe">Subscribe</button>
       </div>
-    </section>
-    <section class="blog">
+    </aside>
+    <section class="blog" id="blog">
       <div class="grid-container">
         <h2 class="header">Blog</h2>
         <p class="text">
@@ -139,7 +141,7 @@
         </p>
         <div class="latest-posts">
           <article class="post">
-            <a href="#">
+            <a href="#blog">
               <img class="post-image" src="./img/blog-image-1.png" alt="Green Smoothies"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
               <header class="post-header">
@@ -149,17 +151,17 @@
             </a>
           </article>
           <article class="post">
-            <a href="#">
+            <a href="#blog">
               <img class="post-image" src="./img/blog-image-2.png" alt="Growing food"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
-                        <header class="post-header">
-              <h3 class="post-title">Growing Food and a “Thirst” for Innovation</h3>
-              <p>By Ausktezz - <time datetime="2017-03-20 18:30">3 hours ago<time></p>
-            </header>
+              <header class="post-header">
+                <h3 class="post-title">Growing Food and a “Thirst” for Innovation</h3>
+                <p>By Ausktezz - <time datetime="2017-03-20 18:30">3 hours ago<time></p>
+              </header>
             </a>
           </article>
           <article class="post">
-            <a href="#">
+            <a href="#blog">
               <img class="post-image" src="./img/blog-image-3.png" alt="Green Smoothies"/>
               <time class="post-time" datetime="2016-11-20 11:35">20<small>Nov</small></time>
               <header class="post-header">
@@ -172,7 +174,7 @@
         <button class="btn view-more">View More</button>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="grid-container">
         <h2 class="header">Contact</h2>
         <p class="text">
@@ -213,5 +215,7 @@
       <p>Made with <span>love</span> by Auskiteez</p>
     </div>
   </footer>
+  <script src="./main.js"></script>
+  <script src="./smoothscroll.js"></script>  
 </body>
 </html>

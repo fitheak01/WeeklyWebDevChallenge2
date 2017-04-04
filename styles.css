@@ -97,12 +97,17 @@ input[type="tel"] {
   right: 0;
   padding: 20px 0;
   z-index: 3;
+      -webkit-transition: background 1s, padding 1s;
+    -moz-transition: background 1s, padding 1s;
+    -o-transition: background 1s, padding 1s;
+    transition: background 1s, padding 1s;
 }
 
 .nav-content{
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+
 }
 
 .nav .nav-list {

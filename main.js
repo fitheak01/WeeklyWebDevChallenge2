@@ -1,5 +1,4 @@
-document.addEventListener('scroll', setNavbar());
-
+document.addEventListener('scroll', setNavbar);
 
 document.querySelectorAll('.nav-list-item a').forEach(function(item){
     item.addEventListener('click', function(e) {
@@ -19,8 +18,8 @@ document.querySelector('.nav-content a').addEventListener('click', function(e){
 });
 
 function setNavbar() {
+    console.log('navbar set');
     var navigation = document.querySelector('.nav');
-
     if (document.documentElement.scrollTop || document.body.scrollTop > 100) {
        navigation.classList.add('nav-scroll');
     }
@@ -35,5 +34,7 @@ var scrollToElement = function(currentElement) {
     document.querySelector(target).scrollIntoView({ 
         behavior: 'smooth' 
     });
+
+    location.hash = target;
 }
 

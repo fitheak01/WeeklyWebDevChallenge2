@@ -129,6 +129,8 @@ input[type="tel"] {
 .nav-list .nav-list-item a {
   text-decoration: none;
   padding-top: 6px;
+  border-top-color: #ff6033;
+  transition: border-top 300ms ease-in;
 }
 
 .nav-list .nav-list-item a:hover,
@@ -180,6 +182,11 @@ input[type="tel"] {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
 }
 /*--MAIN--*/
 /*ABOUT*/

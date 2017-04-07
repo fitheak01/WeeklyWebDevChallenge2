@@ -127,15 +127,26 @@ input[type="tel"] {
 }
 
 .nav-list .nav-list-item a {
+  position: relative;
   text-decoration: none;
   padding-top: 6px;
-  border-top-color: #ff6033;
-  transition: border-top 300ms ease-in;
 }
 
-.nav-list .nav-list-item a:hover,
-.active-item {
-  border-top: 3px solid #ff6033;
+.nav-list .nav-list-item a::before{
+    transition: background-color 300ms ease-in;
+    background-color: transparent;
+    content: '';
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+}
+
+.nav-list .nav-list-item a:hover::before,
+.nav-list .nav-list-item a.active-item::before {
+    background-color: #ff6033;
 }
 
 .nav-scroll{
@@ -177,13 +188,21 @@ input[type="tel"] {
   margin-top: 32px;
 }
 
-.head .btn-scroll {
+.btn-scroll {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  animation: blinker 2s linear infinite;
+  /*animation: blinker 2s linear infinite;*/
+  opacity: 1;
+  transition: opacity 300ms ease-out;
 }
+
+.btn-scroll.hidden{
+  opacity: 0;
+}
+
+
 
 @keyframes blinker {  
   50% { opacity: 0; }

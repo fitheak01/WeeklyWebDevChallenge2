@@ -20,12 +20,22 @@ document.querySelector('.nav-content a').addEventListener('click', function(e){
 function setNavbar() {
     console.log('navbar set');
     var navigation = document.querySelector('.nav');
-    if (document.documentElement.scrollTop || document.body.scrollTop > 100) {
+    var scroll = document.documentElement.scrollTop || document.body.scrollTop; 
+    var scrollBtn = document.querySelector('.btn-scroll');
+  
+    if (scroll > 100) {
        navigation.classList.add('nav-scroll');
+
+       if (scroll > document.querySelector('#head').style.height - 100) {
+           scrollBtn.classList.add('hidden');
+       }
     }
     else {
-        navigation.classList.remove('nav-scroll');  
+        navigation.classList.remove('nav-scroll');
+        scrollBtn.classList.remove('hidden');
     }
+
+
 }
 
 var setActiveSection = function(){

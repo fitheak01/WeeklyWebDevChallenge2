@@ -604,6 +604,13 @@ input[type="tel"] {
   color: #ffffff;
 }
 
+.btn.send {
+  background-color: #f12b55;
+  display: block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-150px);
+}
 
 .grid-row {
    display: flex;

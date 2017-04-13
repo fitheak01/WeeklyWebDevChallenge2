@@ -195,11 +195,12 @@ input[type="tel"] {
   transform: translateX(-50%);
   /*animation: blinker 2s linear infinite;*/
   opacity: 1;
-  transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
 }
 
 .btn-scroll.hidden{
   opacity: 0;
+  visibility: hidden;
 }
 
 

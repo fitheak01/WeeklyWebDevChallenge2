@@ -51,23 +51,37 @@ var setActiveSection = function() {
     var linkNavList = document.querySelectorAll('.nav-list li a');
     var length = linkNavList.length;
     var currentSection = location.hash;
-    for(var i=0; i< length;i++){
-        if (linkNavList[i].getAttribute('href') == currentSection){
-            linkNavList[i].classList.add('active-item');
-        }
-        else linkNavList[i].classList.remove('active-item');
-    }
+    // for(var i=0; i< length;i++){
+    //     if (linkNavList[i].getAttribute('href') == currentSection){
+    //         linkNavList[i].classList.add('active-item');
+    //     }
+    //     else linkNavList[i].classList.remove('active-item');
+    // }
 }
 
 var setActiveSectionOnScroll = function(scrollPosition) {
-    var sections = document.querySelectorAll("head,section");
+    var sections = document.querySelectorAll("header, section");
     var scroll = scrollPosition;
-    debugger;
-    sections.forEach(function(section){
-        if(scroll <= section.clientHeight){
-            document.querySelector('.nav-list li a[href="' + section.getAttribute('id') + "']");
+    var sectionStart = 0, sectionEnd = 0;
+    var navbarItem, currentSection;
+    for(var i=0;i<sections.length;i++){
+        if (i == 0) {
+            sectionStart=0;
+        } else {
+            sectionStart += sections[i-1].clientHeight;
         }
-    });
+        sectionEnd += sections[i].clientHeight;
+        navbarItem = document.querySelector('.nav-list li a[href="#' + sections[i].getAttribute('id') + '"]');
+        if(sectionStart <= scroll && scroll <= sectionEnd){            
+            navbarItem.classList.add('active-item');
+            currentSection = navbarItem.getAttribute('id');
+            location.hash = '#' + currentSection;
+            break;
+        }
+        else {
+            navbarItem.classList.remove('active-item');
+        }
+    }
 }
 
 var scrollToElement = function(target) {

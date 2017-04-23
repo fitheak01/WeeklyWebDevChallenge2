@@ -1,22 +1,11 @@
 document.addEventListener('scroll', setNavbar);
 
-document.querySelectorAll('.nav-list-item a').forEach(function(item){
+document.querySelectorAll('.nav-list-item a, .btn-scroll, .footer a').forEach(function(item){
     item.addEventListener('click', function(e) {
         e.preventDefault();
         scrollToElement(this.getAttribute('href'));
     })
 });
-
-document.querySelector('.btn-scroll').addEventListener('click', function(e){
-    e.preventDefault();
-    scrollToElement(this.getAttribute('href'));
-});
-
-document.querySelector('.footer a').addEventListener('click', function(e){
-    e.preventDefault();
-    scrollToElement(this.getAttribute('href'));
-});
-
 
 function setNavbar() {
     var navigation = document.querySelector('.nav');
@@ -43,23 +32,25 @@ function setNavbar() {
 }
 
 function setActiveSectionOnScroll(scrollPosition) {
-    var sections = document.querySelectorAll("#head, section, aside");
-    var scroll = scrollPosition + 78;
+    var pageSections = document.querySelectorAll("#head, section, aside");
+    var pageSectionsLength = pageSections.length;
+    var nav = document.querySelector('nav');
+    var scroll = scrollPosition + nav.clientHeight;
     var sectionStart = 0, sectionEnd = 0;
     var navbarItem, currentSection;
 
-    for(var i=0;i<sections.length;i++){
+    for(var i=0;i<pageSectionsLength;i++){
+        currentSection = pageSections[i];
         if (i == 0) {
             sectionStart=0;
         } else {
-            sectionStart += sections[i-1].clientHeight;
+            sectionStart += pageSections[i-1].clientHeight;
         }
-        sectionEnd += sections[i].clientHeight;
-        currentSection = sections[i].getAttribute('id');
-        if (sections[i].tagName == "ASIDE") { 
+        sectionEnd += currentSection.clientHeight;
+        if (currentSection.tagName == "ASIDE") { 
             continue;          
         }
-        navbarItem = document.querySelector('.nav-list li a[href="#' + sections[i].getAttribute('id') + '"]');
+        navbarItem = document.querySelector('.nav-list li a[href="#' + currentSection.getAttribute('id') + '"]');
         if(sectionStart <= scroll && scroll <= sectionEnd){            
             navbarItem.classList.add('active-item');
         }

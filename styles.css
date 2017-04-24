@@ -204,6 +204,11 @@ input[type="tel"] {
   visibility: hidden;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 
 
 @keyframes blinker {  
@@ -371,13 +376,14 @@ input[type="tel"] {
 }
 
 
-.gallery .view-more{
+.view-more{
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #5585a2;
 }
+
 .subscribe {
   background: #ffffff;
   background: url("./img/whortleberry.png") 85% center no-repeat;
@@ -438,6 +444,8 @@ input[type="tel"] {
 .blog .latest-posts{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+  
 }
 
 .post{
@@ -446,6 +454,7 @@ input[type="tel"] {
   box-shadow: 6px 6px 25px -6px rgba(0,0,0,0.41);
   position: relative;
   cursor: pointer;
+  width: 370px;
 }
 
 .post .post-time{

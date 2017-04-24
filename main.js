@@ -1,11 +1,15 @@
 document.addEventListener('scroll', setNavbar);
 
-document.querySelectorAll('.nav-list-item a, .btn-scroll, .footer a').forEach(function(item){
+document.querySelectorAll('.nav-list-item a, .btn-scroll, .footer a').forEach(function(item) {
     item.addEventListener('click', function(e) {
         e.preventDefault();
         scrollToElement(this.getAttribute('href'));
     })
 });
+
+document.querySelector('.gallery .view-more').addEventListener('click', loadGalleryImages);
+document.querySelector('.blog .view-more').addEventListener('click', loadBlogPosts);
+
 
 function setNavbar() {
     var navigation = document.querySelector('.nav');
@@ -65,6 +69,38 @@ function scrollToElement(target) {
         behavior: 'smooth' 
     });
     location.hash = target;   
+}
+
+function loadGalleryImages() {
+    var button = document.querySelector('.gallery .view-more');
+    button.classList.add('hidden');
+    var gallery = document.querySelector('.gallery .grid-container');
+    
+    var galleryRow = document.createElement('div');
+    galleryRow.classList.add('gallery-row');
+    var galleryCol = document.createElement('div');
+    galleryCol.classList.add('gallery-col');
+    galleryCol.classList.add('full');
+    
+    var img = document.createElement('img');
+    var imgGlass = document.createElement('img');
+    img.src = './img/gallery-image-5.png';
+    imgGlass.src = './img/gallery-image-4.png';
+
+    galleryCol.appendChild(img);
+    galleryCol.appendChild(imgGlass);
+    
+    galleryRow.appendChild(galleryCol);
+    gallery.appendChild(galleryRow);
+}
+
+function loadBlogPosts() {
+    var button = document.querySelector('.blog .view-more');
+    button.classList.add('hidden');
+    var blog = document.querySelector('.blog .grid-container');
+    var posts = document.querySelector('.blog .latest-posts').cloneNode(true);
+    
+    blog.appendChild(posts);
 }
 
 

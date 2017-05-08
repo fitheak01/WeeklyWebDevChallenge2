@@ -103,7 +103,7 @@
           Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <div class=gallery-row>
+        <div class="gallery-row">
           <div class="gallery-col main">
             <img src="./img/gallery-image-1.png" alt="">
           </div>
@@ -112,10 +112,12 @@
             <img src="./img/gallery-image-3.png" alt="">
           </div>
         </div>
-        <div class=gallery-row>
-          <div class="gallery-col full">
+        <div class="gallery-row ">
+          <div class="col-1-2 side">
             <img src="./img/gallery-image-4.png" alt="">
-            <img src="./img/gallery-image-5.png" alt="">
+          </div>
+          <div class="col-1-2 side">
+            <img src="./img/gallery-image-5.png" alt="">            
           </div>
         </div>
       </div>
@@ -185,13 +187,13 @@
           <div class="col-1-2">
             <form class="contact-form">
               <label for="name">Your name</label>
-              <input type="text" id="name" placeholder="Your name...">
+              <input type="text" id="name" placeholder="Your name..." required>
               <label for="mail">Your email</label>            
-              <input type="mail" id="mail" placeholder="Your email...">
+              <input type="mail" id="mail" placeholder="Your email..." required>
               <label for="phone">Your phone number</label>              
               <input type="tel" id="phone" placeholder="Your phone number...">
               <label for="message">Your message</label>                            
-              <textarea id="message" placeholder="Your message..."></textarea>
+              <textarea id="message" placeholder="Your message..." required></textarea>
               <button type="submit" class="btn send">Send</button>
             </form>
           </div>

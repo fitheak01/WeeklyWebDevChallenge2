@@ -336,7 +336,9 @@ input[type="tel"] {
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
-
+.gallery img {
+  width: 100%;
+}
 .gallery-col{
   display: flex;
 }
